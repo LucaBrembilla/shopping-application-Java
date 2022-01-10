@@ -1,0 +1,1 @@
+Qui abbiamo caricato my-sql-connector, utile per connettere il progetto java a un database sql.
