@@ -104,7 +104,8 @@ INSERT INTO `food` (`foodId`, `foodName`, `price`, `quantity` , `foodDescription
 (102, 'PolloPazzo', 3.00,8,  'Panino al pollo con salsa piccante'),
 (103, 'Kebab', 5.00, 8, 'Panino con diversi tipi di carne e salse'),
 (104, 'TripleUltraDelux', 7.00, 5, 'Panino con tre hamburger, formaggi e pomodoro'),
-(105, 'Alpino', 3.00, 6, 'Pane e cotechino');
+(105, 'Alpino', 3.00, 6, 'Pane e cotechino'),
+(106, 'PorcoPane', 3.00, 3, 'Pane e prosciutto');
 
 -- --------------------------------------------------------
 
