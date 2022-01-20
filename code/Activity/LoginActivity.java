@@ -42,7 +42,7 @@ super("Login");
 		panel.setBackground(Theme.BACKGROUND_PANEL);
 		
 		title = new JLabel("Peso's Takeaway");
-		title.setBounds(30, 40, 555, 75);
+		title.setBounds(30, 40, 365, 75);
 		title.setOpaque(true);
 		title.setBorder(new EmptyBorder(0,20,0,0));
 		title.setFont(Theme.FONT_TITLE);
@@ -58,7 +58,7 @@ super("Login");
 		panel.add(buttonExit);
 		
 		buttonSignup = new JButton("Registrati");
-		buttonSignup.setBounds(Theme.GUI_WIDTH-140, 80, Theme.BUTTON_PRIMARY_WIDTH,30);
+		buttonSignup.setBounds(Theme.GUI_WIDTH-150, 80, Theme.BUTTON_PRIMARY_WIDTH+20,30);
 		buttonSignup.setFont(Theme.FONT_BUTTON);
 		buttonSignup.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonSignup.setForeground(Theme.COLOR_BUTTON_PRIMARY);
