@@ -83,7 +83,7 @@ public class ViewEmployeeActivity extends JFrame implements ActionListener {
 		byWhatCB.setFont(Theme.FONT_INPUT);
 		panel.add(byWhatCB);
 		
-		buttonCheck = new JButton("Search");
+		buttonCheck = new JButton("Cerca");
 		buttonCheck.setBounds(500, 140, Theme.BUTTON_PRIMARY_WIDTH,30);
 		buttonCheck.setFont(Theme.FONT_BUTTON);
 		buttonCheck.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
