@@ -37,7 +37,7 @@ public class ViewPurchasesActivity extends JFrame implements ActionListener  {
 		panel.setBackground(Theme.BACKGROUND_PANEL);
 		
 		title = new JLabel("Tutti gli ordini");
-		title.setBounds(30, 40, 480,75);
+		title.setBounds(30, 40, 315,75);
 		title.setOpaque(true);
 		title.setBorder(new EmptyBorder(0,20,0,0));
 		title.setFont(Theme.FONT_TITLE);
