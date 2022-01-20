@@ -28,7 +28,7 @@ public class SignupActivity extends JFrame implements ActionListener {
 		panel.setBackground(Theme.BACKGROUND_PANEL);
 		
 		title = new JLabel("Registrazione");
-		title.setBounds(30, 40, 200,75);
+		title.setBounds(30, 40, 300, 75);
 		title.setOpaque(true);
 		title.setBorder(new EmptyBorder(0,20,0,0));
 		title.setFont(Theme.FONT_TITLE);
