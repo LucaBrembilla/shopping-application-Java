@@ -24,7 +24,7 @@ public class ViewEmployeeActivity extends JFrame implements ActionListener {
 	JTextField keywordTF;
 	
 	public ViewEmployeeActivity(JFrame prev, Employee employee) {
-		super("Vista Impiegato");
+		super("Vista Impiegati");
 		
 		this.setSize(Theme.GUI_WIDTH, Theme.GUI_HEIGHT);
 		this.setResizable(false);
