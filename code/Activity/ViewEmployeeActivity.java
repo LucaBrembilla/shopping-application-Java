@@ -36,8 +36,8 @@ public class ViewEmployeeActivity extends JFrame implements ActionListener {
 		panel.setLayout(null);
 		panel.setBackground(Theme.BACKGROUND_PANEL);
 		
-		title = new JLabel("View Impiegato");
-		title.setBounds(30, 40, 340,75);
+		title = new JLabel("Vista Impiegati");
+		title.setBounds(30, 40, 330,75);
 		title.setOpaque(true);
 		title.setBorder(new EmptyBorder(0,20,0,0));
 		title.setFont(Theme.FONT_TITLE);
