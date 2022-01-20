@@ -61,7 +61,7 @@ public class ManageFood extends JFrame implements ActionListener  {
 		userIdTF.setVisible(false);
 		panel.add(userIdTF);
 		
-		productQtLabel = new JLabel("Quantit‡: ");
+		productQtLabel = new JLabel("Quantit√†: ");
 		productQtLabel.setBounds(60, 220, 140, 30);
 		productQtLabel.setFont(Theme.FONT_INPUT);
 		panel.add(productQtLabel);
@@ -123,7 +123,7 @@ public class ManageFood extends JFrame implements ActionListener  {
 		userIdLabel.setFont(Theme.FONT_INPUT);
 		panel.add(userIdLabel);
 		
-		productQtLabel = new JLabel("Quantit‡: ");
+		productQtLabel = new JLabel("Quantit√†: ");
 		productQtLabel.setBounds(60, 180, 140, 30);
 		productQtLabel.setFont(Theme.FONT_INPUT);
 		panel.add(productQtLabel);
