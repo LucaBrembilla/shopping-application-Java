@@ -220,7 +220,7 @@ public class ManageFood extends JFrame implements ActionListener  {
 		}
 		else if (ae.getSource().equals(buttonSubmit)) {
 			try {
-				product.updateFood(productNameTF.getText(),Double.parseDouble(productPriceTF.getText()),Integer.parseInt(productQtTF.getText()));
+				product.updateFood(productNameTF.getText(),productDesTF.getText(),Double.parseDouble(productPriceTF.getText()),Integer.parseInt(productQtTF.getText()));
 				if (!prev.keywordTF.getText().trim().isEmpty())
 					prev.table.setModel(Food.searchFood(prev.keywordTF.getText().trim(), prev.byWhatCB.getSelectedItem().toString()));
 				else
