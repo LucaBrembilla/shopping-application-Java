@@ -139,7 +139,7 @@ public class Food extends Product {
 			System.out.println("statement created");
 			st.execute(query);//insert
 			System.out.println("data inserted");
-			updateFood(this.FoodName, this.price, this.quantity-amount);
+			updateFood(this.FoodName,this.Description, this.price, this.quantity-amount);
 		}
         catch(Exception ex) {
 			JOptionPane.showMessageDialog(null,"Il Cliente non esiste!"); 
@@ -163,8 +163,8 @@ public class Food extends Product {
      * @param  qnt 
      * @return
      */
-    public void updateFood(String  name, double  price, int  qnt) {
-    	String query = "UPDATE `food` SET `foodName`='"+name+"', `price`="+price+", `quantity`="+qnt+" WHERE `foodId`='"+this.productId+"';";
+    public void updateFood(String  name, String description, double  price, int  qnt) {
+    	String query = "UPDATE `food` SET `foodName`='"+name+"', `price`="+price+", `quantity`="+qnt+", `foodDescription`='"+description+"' WHERE `foodId`='"+this.productId+"';";
 		Connection con = null;
         Statement st = null;
 		System.out.println(query);
