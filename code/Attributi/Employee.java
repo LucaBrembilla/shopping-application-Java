@@ -54,7 +54,7 @@ public class Employee extends User {
 	
 	public void createEmployee() {
 		String query1 = "INSERT INTO `login` VALUES ('"+userId+"','"+password+"',"+status+");";
-		String query2 = "INSERT INTO `employee` VALUES ('"+userId+"','"+employeeName+"','"+phoneNumber+"','"+role+"', '"+salary+"');";
+		String query2 = "INSERT INTO `employee` VALUES ('"+userId+"','"+employeeName+"','"+phoneNumber+"','"+role+"', "+salary+");";
 		Connection con = null;
         Statement st = null;
 		System.out.println(query1);
@@ -72,7 +72,7 @@ public class Employee extends User {
 			JOptionPane.showMessageDialog(null,"Account Created!");
 		}
         catch(Exception ex) {
-			JOptionPane.showMessageDialog(null,"Failed to create account!");
+			JOptionPane.showMessageDialog(null,"Fallito!");
 			System.out.println("Exception : " +ex.getMessage());
         }
         finally {
@@ -149,7 +149,7 @@ public class Employee extends User {
 			this.salary = salary;
 		}
         catch(Exception ex) {
-			JOptionPane.showMessageDialog(null,"Failed to update account!");
+			JOptionPane.showMessageDialog(null,"Fallito!");
 			System.out.println("Exception : " +ex.getMessage());
         }
         finally {
@@ -189,7 +189,7 @@ public class Employee extends User {
 			this.salary = 0;
 		}
         catch(Exception ex) {
-			JOptionPane.showMessageDialog(null,"Failed to delete account!");
+			JOptionPane.showMessageDialog(null,"Fallito!");
 			System.out.println("Exception : " +ex.getMessage());
         }
         finally {
