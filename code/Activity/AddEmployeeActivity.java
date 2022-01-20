@@ -1,195 +1,300 @@
-package Activity;
+package Attributi;
 
-import java.lang.*;
 import java.util.*;
+import java.lang.*;
+import java.sql.*;
 import javax.swing.*;
-import java.awt.*;
-import javax.swing.border.*;
-import java.awt.event.*;
+import javax.swing.table.*;
 import Attributi.*;
 import Activity.*;
 
 /**
  * 
  */
-public class AddEmployeeActivity extends JFrame implements ActionListener{
-	private JPanel panel;
-	private ViewEmployeeActivity activity;
-	private JButton buttonLogout, buttonBack, buttonAdd, buttonEdit, buttonDelete, buttonRandom;
-	private JLabel title, header, employeeIdLabel, employeeNameLabel, roleLabel, employeePhoneLabel, salaryLabel;
-	private JComboBox roleCB;
-	private JTextField employeeIdTF, employeeNameTF, salaryTF, employeePhoneTF1, employeePhoneTF2, passwordTF;
-	private Random r;
+public class Employee extends User {
+	private String employeeName;
+	private String phoneNumber;
+	private String role;
+	public static String[] columnNames = {"EmployeeID", "EmployeeName", "PhoneNumber", "Role", "Salary"};
+	public static String[] columnName = {"PurchaseID", "CustomerID", "ProductID", "ProductName", "Amount", "Cost", "Date"};
+	public static String[] roles = {"General", "Manager"};
+	private double salary;
+	public Employee(String userId) {
+		super(userId);
+		this.setStatus(0);
+	}
 	
-	public AddEmployeeActivity(ViewEmployeeActivity prev, Employee employee) {
-		super("Nuovo Impiegato");
-		
-		this.setSize(Theme.GUI_WIDTH, Theme.GUI_HEIGHT);
-		this.setResizable(false);
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setLocationRelativeTo(null);
-		this.activity = prev;
-		r = new Random();
-		
-		panel = new JPanel();
-		panel.setLayout(null);
-		panel.setBackground(Theme.BACKGROUND_PANEL);
-		
-		title = new JLabel("Nuovo Impiegato");
-		title.setBounds(30, 40, 360,75);
-		title.setOpaque(true);
-		title.setBorder(new EmptyBorder(0,20,0,0));
-		title.setFont(Theme.FONT_TITLE);
-		title.setForeground(Theme.COLOR_TITLE);
-		panel.add(title);
-		
-		buttonLogout = new JButton("Logout");
-		buttonLogout.setBounds(Theme.GUI_WIDTH-140, 40, Theme.BUTTON_PRIMARY_WIDTH,30);
-		buttonLogout.setFont(Theme.FONT_BUTTON);
-		buttonLogout.setBackground(Color.WHITE);
-		buttonLogout.setForeground(Theme.COLOR_TITLE);
-		buttonLogout.addActionListener(this);
-		panel.add(buttonLogout);
-		
-		buttonBack = new JButton("Indietro");
-		buttonBack.setBounds(Theme.GUI_WIDTH-140, 80, Theme.BUTTON_PRIMARY_WIDTH,30);
-		buttonBack.setFont(Theme.FONT_BUTTON);
-		buttonBack.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
-		buttonBack.setForeground(Theme.COLOR_BUTTON_PRIMARY);
-		buttonBack.addActionListener(this);
-		panel.add(buttonBack);
-		
-		employeeIdLabel = new JLabel("ID Impiegato: ");
-		employeeIdLabel.setBounds(60, 140, 140, 30);
-		employeeIdLabel.setFont(Theme.FONT_REGULAR);
-		panel.add(employeeIdLabel);
-		
-		employeeIdLabel = new JLabel("Password: ");
-		employeeIdLabel.setBounds(60, 190, 140, 30);
-		employeeIdLabel.setFont(Theme.FONT_REGULAR);
-		panel.add(employeeIdLabel);
-		
-		employeeNameLabel = new JLabel("Nome: ");
-		employeeNameLabel.setBounds(60, 240, 140, 30);
-		employeeNameLabel.setFont(Theme.FONT_REGULAR);
-		panel.add(employeeNameLabel);
-		
-		employeePhoneLabel = new JLabel("Cellulare: ");
-		employeePhoneLabel.setBounds(60, 290, 140, 30);
-		employeePhoneLabel.setFont(Theme.FONT_REGULAR);
-		panel.add(employeePhoneLabel);
-		
-		roleLabel = new JLabel("Ruolo: ");
-		roleLabel.setBounds(60, 340, 340, 30);
-		roleLabel.setFont(Theme.FONT_REGULAR);
-		panel.add(roleLabel);
-		
-		salaryLabel = new JLabel("Salario: ");
-		salaryLabel.setBounds(60, 390, 140, 30);
-		salaryLabel.setFont(Theme.FONT_REGULAR);
-		panel.add(salaryLabel);
-		
-		employeeIdTF = new JTextField();
-		employeeIdTF.setBounds(180, 140, 220, 30);
-		employeeIdTF.setFont(Theme.FONT_INPUT);
-		panel.add(employeeIdTF);
-		
-		passwordTF = new JTextField(""+(r.nextInt(89999999)+10000000));
-		passwordTF.setBounds(180, 190, 220, 30);
-		passwordTF.setFont(Theme.FONT_INPUT);
-		passwordTF.setEnabled(false);
-		passwordTF.setDisabledTextColor(Color.BLACK);
-		panel.add(passwordTF);
-		
-		buttonRandom = new JButton("Genera");
-		buttonRandom.setBounds(400, 190, Theme.BUTTON_PRIMARY_WIDTH,30);
-		buttonRandom.setFont(Theme.FONT_BUTTON);
-		buttonRandom.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
-		buttonRandom.setForeground(Theme.COLOR_BUTTON_PRIMARY);
-		buttonRandom.addActionListener(this);
-		panel.add(buttonRandom);
-		
-		employeeNameTF = new JTextField();
-		employeeNameTF.setBounds(180, 240, 220, 30); 
-		employeeNameTF.setFont(Theme.FONT_INPUT);
-		panel.add(employeeNameTF);
-		
-		employeePhoneTF1 = new JTextField("+39");
-		employeePhoneTF1.setBounds(180, 290, 40, 30);
-		employeePhoneTF1.setEnabled(false);
-		employeePhoneTF1.setFont(Theme.FONT_INPUT);
-		panel.add(employeePhoneTF1);
+	public void setEmployeeName(String name) {
+		if (!name.isEmpty())
+			this.employeeName = name;
+		else
+			throw new IllegalArgumentException("Fill in the name");
+	}
+	public void setPhoneNumber(int num) {
+		this.phoneNumber = "+39"+num;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public String getEmployeeName() {
+		return employeeName;
+	}
+	public String getRole() {
+		return role;
+	}
+	public double getSalary() {
+		return salary;
+	}
 	
-		employeePhoneTF2 = new JTextField();
-		employeePhoneTF2.setBounds(220, 290, 180, 30);
-		employeePhoneTF2.setFont(Theme.FONT_INPUT);
-		panel.add(employeePhoneTF2);
-		
-		roleCB = new JComboBox(Employee.roles);
-		roleCB.setBounds(180, 340, 160, 30);
-		roleCB.setFont(Theme.FONT_INPUT);
-		panel.add(roleCB);
-		
-		salaryTF = new JTextField();
-		salaryTF.setBounds(180, 390, 220, 30);
-		salaryTF.setFont(Theme.FONT_INPUT);
-		panel.add(salaryTF);
-		
-		buttonAdd = new JButton("Aggiungi");
-		buttonAdd.setBounds(60, 440, Theme.BUTTON_PRIMARY_WIDTH,30);
-		buttonAdd.setFont(Theme.FONT_BUTTON);
-		buttonAdd.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
-		buttonAdd.setForeground(Theme.COLOR_BUTTON_PRIMARY);
-		buttonAdd.addActionListener(this);
-		panel.add(buttonAdd);
-		
-		header = new JLabel();
-		header.setBackground(Theme.BACKGROUND_HEADER);
-		header.setOpaque(true);
-		header.setBounds(0, 0, Theme.GUI_WIDTH, 75);
-		panel.add(header);
-		
-		this.add(panel);
+	public void createEmployee() {
+		String query1 = "INSERT INTO `login` VALUES ('"+userId+"','"+password+"',"+status+");";
+		String query2 = "INSERT INTO `employee` VALUES ('"+userId+"','"+employeeName+"','"+phoneNumber+"','"+role+"', "+salary+");";
+		Connection con = null;
+        Statement st = null;
+		System.out.println(query1);
+		System.out.println(query2);
+        try {
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("driver loaded");
+			con = DriverManager.getConnection(Database.HOST_URI, Database.USER, Database.PASSWORD);
+			System.out.println("connection done");//connection with database established
+			st = con.createStatement();//create statement
+			System.out.println("statement created");
+			st.execute(query1);//insert
+			st.execute(query2);
+			System.out.println("data inserted");
+			JOptionPane.showMessageDialog(null,"Account Created!");
+		}
+        catch(Exception ex) {
+			JOptionPane.showMessageDialog(null,"Fallito!");
+			System.out.println("Exception : " +ex.getMessage());
+        }
+        finally {
+            try {
+                if(st!=null)
+					st.close();
+
+                if(con!=null)
+					con.close();
+            }
+            catch(Exception ex) {}
+        }
+	}
+	
+	public void fetch() {
+		String query = "SELECT `userId`, `employeeName`, `phoneNumber`, `role`, `salary` FROM `employee` WHERE userId='"+this.userId+"';";     
+        Connection con = null;
+        Statement st = null;
+		ResultSet rs = null;
+		System.out.println(query);
+        try {
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("driver loaded");
+			con = DriverManager.getConnection(Database.HOST_URI, Database.USER, Database.PASSWORD);
+			System.out.println("connection done");//connection with database established
+			st = con.createStatement();//create statement
+			System.out.println("statement created");
+			rs = st.executeQuery(query);//getting result
+			System.out.println("results received");
+			boolean flag = false;
+			while(rs.next()) {
+				this.employeeName = rs.getString("employeeName");
+				this.phoneNumber = rs.getString("phoneNumber");
+				this.role = rs.getString("role");
+				this.salary = rs.getDouble("salary");
+			}
+		}
+        catch(Exception ex) {
+			System.out.println("Exception : " +ex.getMessage());
+        }
+        finally {
+            try {
+                if(rs!=null)
+					rs.close();
+
+                if(st!=null)
+					st.close();
+
+                if(con!=null)
+					con.close();
+            }
+            catch(Exception ex) {}
+        }
+	}
+	
+	public void updateEmployee(String name, int phone, String role, double salary) {
+		String query = "UPDATE `employee` SET `employeeName`='"+name+"', `phoneNumber`='+880"+phone+"', `role`='"+role+"', `salary`="+salary+" WHERE `userId`='"+this.userId+"';";
+		Connection con = null;
+        Statement st = null;
+		System.out.println(query);
+        try {
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("driver loaded");
+			con = DriverManager.getConnection(Database.HOST_URI, Database.USER, Database.PASSWORD);
+			System.out.println("connection done");//connection with database established
+			st = con.createStatement();//create statement
+			System.out.println("statement created");
+			st.executeUpdate(query);//insert
+			System.out.println("data inserted");
+			JOptionPane.showMessageDialog(null,"Information Updated!");
+			this.employeeName = name;
+			this.phoneNumber = "+880"+phone;
+			this.role = role;
+			this.salary = salary;
+		}
+        catch(Exception ex) {
+			JOptionPane.showMessageDialog(null,"Fallito!");
+			System.out.println("Exception : " +ex.getMessage());
+        }
+        finally {
+            try {
+                if(st!=null)
+					st.close();
+
+                if(con!=null)
+					con.close();
+            }
+            catch(Exception ex) {}
+        }
+	}
+	
+	public void deleteEmployee() {
+		String query1 = "DELETE FROM `login` WHERE `userId`='"+this.userId+"';";
+		String query2 = "DELETE FROM `employee` WHERE `userId`='"+this.userId+"';";
+		Connection con = null;
+        Statement st = null;
+		System.out.println(query1);
+		System.out.println(query2);
+        try {
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("driver loaded");
+			con = DriverManager.getConnection(Database.HOST_URI, Database.USER, Database.PASSWORD);
+			System.out.println("connection done");//connection with database established
+			st = con.createStatement();//create statement
+			System.out.println("statement created");
+			st.execute(query1);
+			st.execute(query2);//delete
+			System.out.println("data deleted");
+			JOptionPane.showMessageDialog(null,"Account Deleted!");
+			this.userId = "";
+			this.employeeName = "";
+			this.phoneNumber = "";
+			this.role = "";
+			this.salary = 0;
+		}
+        catch(Exception ex) {
+			JOptionPane.showMessageDialog(null,"Fallito!");
+			System.out.println("Exception : " +ex.getMessage());
+        }
+        finally {
+            try {
+                if(st!=null)
+					st.close();
+
+                if(con!=null)
+					con.close();
+            }
+            catch(Exception ex) {}
+        }
+	}
+	
+	public static DefaultTableModel searchEmployee(String keyword, String byWhat) {
+		DefaultTableModel model = new DefaultTableModel();
+		model.setColumnIdentifiers(columnNames);
+		String query = "SELECT * FROM `employee` WHERE `userId`='"+keyword+"';";
+		if (byWhat.equals("By Name"))
+			query = "SELECT * FROM `employee` WHERE `employeeName` LIKE '%"+keyword+"%';";
+		else {}
+        Connection con = null;
+        Statement st = null;
+		ResultSet rs = null;
+		System.out.println(query);
+        try {
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("driver loaded");
+			con = DriverManager.getConnection(Database.HOST_URI, Database.USER, Database.PASSWORD);
+			System.out.println("connection done");//connection with database established
+			st = con.createStatement();//create statement
+			System.out.println("statement created");
+			rs = st.executeQuery(query);//getting result
+			System.out.println("results received");
+			
+			while(rs.next()) {
+				model.addRow(new Object[]{rs.getString("userId"), rs.getString("employeeName"), rs.getString("phoneNumber"), rs.getString("role"), rs.getString("salary")});
+			}
+		}
+        catch(Exception ex) {
+			System.out.println("Exception : " +ex.getMessage());
+        }
+        finally {
+            try {
+                if(rs!=null)
+					rs.close();
+
+                if(st!=null)
+					st.close();
+
+                if(con!=null)
+					con.close();
+            }
+            catch(Exception ex) {}
+        }
+		return model;
 	}
 
-	public void actionPerformed(ActionEvent ae) {
-		if (ae.getSource().equals(buttonLogout)) {
-			this.setVisible(false);
-			new LoginActivity().setVisible(true);
+public DefaultTableModel AllProduct() {
+	DefaultTableModel model1 = new DefaultTableModel();
+	model1.setColumnIdentifiers(columnName);
+	String query = "SELECT purchaseInfo.purchaseId, purchaseInfo.userId as CustomerId, purchaseInfo.productId, food.foodName AS productName, purchaseInfo.cost, purchaseInfo.amount, purchaseInfo.date FROM purchaseInfo, food WHERE  (purchaseInfo.productId=food.foodId) "
+            + "UNION "
+                 + "SELECT purchaseInfo.purchaseId, purchaseInfo.userId as CustomerId, purchaseInfo.productId, drink.drinkName AS productName, purchaseInfo.cost, purchaseInfo.amount, purchaseInfo.date FROM purchaseInfo, drink WHERE ( purchaseInfo.productId=drink.drinkId) ORDER BY date DESC;";
+    Connection con = null;
+    Statement st = null;
+	ResultSet rs = null;
+	System.out.println(query);
+    try {
+		Class.forName("com.mysql.jdbc.Driver");
+		System.out.println("driver loaded");
+		con = DriverManager.getConnection(Database.HOST_URI, Database.USER, Database.PASSWORD);
+		System.out.println("connection done");//connection with database established
+		st = con.createStatement();//create statement
+		System.out.println("statement created");
+		rs = st.executeQuery(query);//getting result
+		System.out.println("results received");
+		
+		while(rs.next()) {
+			String col1 = rs.getString("purchaseId");
+			String col2 = rs.getString("CustomerId");
+			String col3 = rs.getString("productId");
+			String col4 = rs.getString("productName");
+			int col5 = rs.getInt("amount");
+			double col6 = rs.getDouble("cost");
+			String col7 = rs.getString("date");
+			model1.addRow(new Object[]{col1, col2, col3, col4, col5, col6, col7});
 		}
-		else if (ae.getSource().equals(buttonBack)) {
-			this.setVisible(false);
-			activity.setVisible(true);
-		}
-		else if (ae.getSource().equals(buttonAdd)) {
-			try {
-				Employee e = new Employee(employeeIdTF.getText().trim());
-				e.setPassword(passwordTF.getText().trim());
-				e.setEmployeeName(employeeNameTF.getText().trim());
-				e.setPhoneNumber(Integer.parseInt(employeePhoneTF2.getText()));
-				e.setSalary(Double.parseDouble(salaryTF.getText()));
-				e.setRole(roleCB.getSelectedItem().toString());
-				e.createEmployee();
-				employeeIdTF.setText("");
-				employeeNameTF.setText("");
-				employeePhoneTF2.setText("");
-				salaryTF.setText("");
-				roleCB.setSelectedIndex(0);
-				if (!activity.keywordTF.getText().trim().isEmpty())
-					activity.table.setModel(Employee.searchEmployee(activity.keywordTF.getText().trim(), activity.byWhatCB.getSelectedItem().toString()));
-				else
-					activity.table.setModel(Employee.searchEmployee("", "By Name"));
-			}
-			catch (NumberFormatException e) {
-				JOptionPane.showMessageDialog(this,"Numero non corretto!"); 
-			}
-			catch (IllegalArgumentException e) {
-				JOptionPane.showMessageDialog(this,e.getMessage()); 
-			}
-		}
-		else if (ae.getSource().equals(buttonRandom)) {
-			passwordTF.setText(""+(r.nextInt(89999999)+10000000));
-		}
-		else {}
 	}
+    catch(Exception ex) {
+		System.out.println("Exception : " +ex.getMessage());
+    }
+    finally {
+        try {
+            if(rs!=null)
+				rs.close();
+
+            if(st!=null)
+				st.close();
+
+            if(con!=null)
+				con.close();
+        }
+        catch(Exception ex) {}
+    }
+	return model1;
+ }
 }
