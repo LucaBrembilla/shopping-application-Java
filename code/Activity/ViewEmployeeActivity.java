@@ -78,7 +78,7 @@ public class ViewEmployeeActivity extends JFrame implements ActionListener {
 		keywordTF.setFont(Theme.FONT_INPUT);
 		panel.add(keywordTF);
 		
-		byWhatCB = new JComboBox(new Object[]{"Per ID", "Per Nome"});
+		byWhatCB = new JComboBox(new Object[]{"By ID", "By Name"});
 		byWhatCB.setBounds(400, 140, 100,30);
 		byWhatCB.setFont(Theme.FONT_INPUT);
 		panel.add(byWhatCB);
