@@ -29,7 +29,7 @@ public class ChangePasswordActivity extends JFrame implements ActionListener{
 		panel.setLayout(null);
 		
 		oldLabel = new JLabel("Vecchia Password: ");
-		oldLabel.setBounds(40, 20, 150, 30);
+		oldLabel.setBounds(20, 20, 150, 30);
 		oldLabel.setFont(Theme.FONT_INPUT);
 		panel.add(oldLabel);
 		
@@ -39,7 +39,7 @@ public class ChangePasswordActivity extends JFrame implements ActionListener{
 		panel.add(oldPF);
 		
 		newLabel = new JLabel("Nuova Password: ");
-		newLabel.setBounds(40, 70, 150, 30);
+		newLabel.setBounds(20, 70, 150, 30);
 		newLabel.setFont(Theme.FONT_INPUT);
 		panel.add(newLabel);
 		
@@ -56,7 +56,7 @@ public class ChangePasswordActivity extends JFrame implements ActionListener{
 		buttonSubmit.addActionListener(this);
 		panel.add(buttonSubmit);
 		
-		buttonCancel = new JButton("Cancella");
+		buttonCancel = new JButton("Indietro");
 		buttonCancel.setBounds(300, 120, Theme.BUTTON_PRIMARY_WIDTH,30);
 		buttonCancel.setFont(Theme.FONT_BUTTON);
 		buttonCancel.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
