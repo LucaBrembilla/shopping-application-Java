@@ -42,8 +42,8 @@ public class ViewFoodActivity extends JFrame implements ActionListener  {
 		panel.setLayout(null);
 		panel.setBackground(Theme.BACKGROUND_PANEL);
 		
-		title = new JLabel("Vedi Panino");
-		title.setBounds(30, 40, 300,75);
+		title = new JLabel("Vista Panini");
+		title.setBounds(30, 40, 270,75);
 		title.setOpaque(true);
 		title.setBorder(new EmptyBorder(0,20,0,0));
 		title.setFont(Theme.FONT_TITLE);
@@ -127,8 +127,8 @@ public class ViewFoodActivity extends JFrame implements ActionListener  {
 		panel.setLayout(null);
 		panel.setBackground(Theme.BACKGROUND_PANEL);
 		
-		title = new JLabel("Vedi Panino");
-		title.setBounds(30, 40, 300,75);
+		title = new JLabel("Vista panini");
+		title.setBounds(30, 40, 270,75);
 		title.setOpaque(true);
 		title.setBorder(new EmptyBorder(0,20,0,0));
 		title.setFont(Theme.FONT_TITLE);
