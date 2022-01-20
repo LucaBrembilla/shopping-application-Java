@@ -31,7 +31,7 @@ public class AddDrinkActivity extends JFrame implements ActionListener  {
 		panel.setBackground(Theme.BACKGROUND_PANEL);
 		
 		title = new JLabel("Aggiungi Bibite");
-		title.setBounds(30, 40, 280,75);
+		title.setBounds(30, 40, 335,75);
 		title.setOpaque(true);
 		title.setBorder(new EmptyBorder(0,20,0,0));
 		title.setFont(Theme.FONT_TITLE);
@@ -64,7 +64,7 @@ public class AddDrinkActivity extends JFrame implements ActionListener  {
 		productPriceLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(productPriceLabel);
 		
-		productQtLabel = new JLabel("Quantit‡: ");
+		productQtLabel = new JLabel("Quantit√†: ");
 		productQtLabel.setBounds(60, 290, 140, 30);
 		productQtLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(productQtLabel);
