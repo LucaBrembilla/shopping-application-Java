@@ -36,7 +36,7 @@ public class AddEmployeeActivity extends JFrame implements ActionListener{
 		panel.setBackground(Theme.BACKGROUND_PANEL);
 		
 		title = new JLabel("Nuovo Impiegato");
-		title.setBounds(30, 40, 340,75);
+		title.setBounds(30, 40, 360,75);
 		title.setOpaque(true);
 		title.setBorder(new EmptyBorder(0,20,0,0));
 		title.setFont(Theme.FONT_TITLE);
