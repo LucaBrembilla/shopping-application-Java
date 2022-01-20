@@ -129,7 +129,7 @@ public class Employee extends User {
 	}
 	
 	public void updateEmployee(String name, int phone, String role, double salary) {
-		String query = "UPDATE `employee` SET `employeeName`='"+name+"', `phoneNumber`='+880"+phone+"', `role`='"+role+"', `salary`="+salary+" WHERE `userId`='"+this.userId+"';";
+		String query = "UPDATE `employee` SET `employeeName`='"+name+"', `phoneNumber`='+39"+phone+"', `role`='"+role+"', `salary`="+salary+" WHERE `userId`='"+this.userId+"';";
 		Connection con = null;
         Statement st = null;
 		System.out.println(query);
@@ -144,7 +144,7 @@ public class Employee extends User {
 			System.out.println("data inserted");
 			JOptionPane.showMessageDialog(null,"Information Updated!");
 			this.employeeName = name;
-			this.phoneNumber = "+880"+phone;
+			this.phoneNumber = "+39"+phone;
 			this.role = role;
 			this.salary = salary;
 		}
