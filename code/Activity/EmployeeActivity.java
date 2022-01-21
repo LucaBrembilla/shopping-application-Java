@@ -76,7 +76,7 @@ public class EmployeeActivity extends JFrame implements ActionListener  {
 		panel.add(buttonViewDrink);
 		
 		buttonViewCustomer = new JButton("Gestisci Clienti");
-		buttonViewCustomer.setBounds(60, 190, 200, 30);
+		buttonViewCustomer.setBounds(60, 220, 200, 30);
 		buttonViewCustomer.setFont(Theme.FONT_BUTTON);
 		buttonViewCustomer.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonViewCustomer.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -84,7 +84,7 @@ public class EmployeeActivity extends JFrame implements ActionListener  {
 		panel.add(buttonViewCustomer);
 		
 		buttonViewPurchases = new JButton("Vedi Ordini");
-		buttonViewPurchases.setBounds(60, 220, 200, 30);
+		buttonViewPurchases.setBounds(60, 250, 200, 30);
 		buttonViewPurchases.setFont(Theme.FONT_BUTTON);
 		buttonViewPurchases.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonViewPurchases.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -93,7 +93,7 @@ public class EmployeeActivity extends JFrame implements ActionListener  {
 		
 		if (employee.getRole().equals("Manager")) {
 			buttonViewEmployee = new JButton("Gestici Impiegati");
-			buttonViewEmployee.setBounds(60, 250, 200, 30);
+			buttonViewEmployee.setBounds(60, 280, 200, 30);
 			buttonViewEmployee.setFont(Theme.FONT_BUTTON);
 			buttonViewEmployee.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 			buttonViewEmployee.setForeground(Theme.COLOR_BUTTON_PRIMARY);
