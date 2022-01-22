@@ -35,7 +35,7 @@ public class CustomerActivity extends JFrame implements ActionListener  {
 		customer.fetch();
 		
 		title = new JLabel("Benvenuto, "+ customer.getCustomerName());
-		title.setBounds(30, 40, customer.getCustomerName().length()*30+220,75);
+		title.setBounds(30, 115, customer.getCustomerName().length()*30+220,75);
 		title.setOpaque(true);
 		title.setBorder(new EmptyBorder(0,20,0,0));
 		title.setFont(Theme.FONT_TITLE);
@@ -43,7 +43,7 @@ public class CustomerActivity extends JFrame implements ActionListener  {
 		panel.add(title);
 		
 		buttonLogout = new JButton("Logout");
-		buttonLogout.setBounds(Theme.GUI_WIDTH-140, 40, Theme.BUTTON_PRIMARY_WIDTH,30);
+		buttonLogout.setBounds(Theme.GUI_WIDTH-140, 115, Theme.BUTTON_PRIMARY_WIDTH,30);
 		buttonLogout.setFont(Theme.FONT_BUTTON);
 		buttonLogout.setBackground(Color.WHITE);
 		buttonLogout.setForeground(Theme.COLOR_TITLE);
@@ -51,7 +51,7 @@ public class CustomerActivity extends JFrame implements ActionListener  {
 		panel.add(buttonLogout);
 		
 		buttonProfile = new JButton("Profilo");
-		buttonProfile.setBounds(Theme.GUI_WIDTH-150, 80, 120,30);
+		buttonProfile.setBounds(Theme.GUI_WIDTH-150, 155, 120,30);
 		buttonProfile.setFont(Theme.FONT_BUTTON);
 		buttonProfile.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonProfile.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -59,7 +59,7 @@ public class CustomerActivity extends JFrame implements ActionListener  {
 		panel.add(buttonProfile);
 		
 		buttonViewFood = new JButton("Vedi Cibo");
-		buttonViewFood.setBounds(60, 160, 200, 30);
+		buttonViewFood.setBounds(60, 235, 200, 30);
 		buttonViewFood.setFont(Theme.FONT_BUTTON);
 		buttonViewFood.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonViewFood.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -67,7 +67,7 @@ public class CustomerActivity extends JFrame implements ActionListener  {
 		panel.add(buttonViewFood);
 		
 		buttonViewDrink = new JButton("Vedi Bibite");
-		buttonViewDrink.setBounds(60, 190, 200, 30);
+		buttonViewDrink.setBounds(60, 265, 200, 30);
 		buttonViewDrink.setFont(Theme.FONT_BUTTON);
 		buttonViewDrink.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonViewDrink.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -75,7 +75,7 @@ public class CustomerActivity extends JFrame implements ActionListener  {
 		panel.add(buttonViewDrink);
 		
 		buttonMyProduct = new JButton("Acquisti Precedenti");
-		buttonMyProduct.setBounds(60, 220, 200, 30);
+		buttonMyProduct.setBounds(60, 295, 200, 30);
 		buttonMyProduct.setFont(Theme.FONT_BUTTON);
 		buttonMyProduct.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonMyProduct.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -83,9 +83,9 @@ public class CustomerActivity extends JFrame implements ActionListener  {
 		panel.add(buttonMyProduct);
 		
 		header = new JLabel();
-		header.setBackground(Theme.BACKGROUND_HEADER);
+		header.setIcon(Theme.IMAGE_HEADER);
 		header.setOpaque(true);
-		header.setBounds(0, 0, Theme.GUI_WIDTH, 75);
+		header.setBounds(0, 0, Theme.GUI_WIDTH, 150);
 		panel.add(header);
 		
 		this.add(panel);
