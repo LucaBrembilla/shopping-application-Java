@@ -53,7 +53,7 @@ public class ViewEmployeeActivity extends JFrame implements ActionListener {
 		panel.add(buttonLogout);
 		
 		buttonBack = new JButton("Indietro");
-		buttonBack.setBounds(Theme.GUI_WIDTH-140, 115, Theme.BUTTON_PRIMARY_WIDTH,30);
+		buttonBack.setBounds(Theme.GUI_WIDTH-140, 155, Theme.BUTTON_PRIMARY_WIDTH,30);
 		buttonBack.setFont(Theme.FONT_BUTTON);
 		buttonBack.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonBack.setForeground(Theme.COLOR_BUTTON_PRIMARY);
