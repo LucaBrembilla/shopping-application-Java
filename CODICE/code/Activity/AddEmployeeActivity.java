@@ -36,7 +36,7 @@ public class AddEmployeeActivity extends JFrame implements ActionListener{
 		panel.setBackground(Theme.BACKGROUND_PANEL);
 		
 		title = new JLabel("Nuovo Impiegato");
-		title.setBounds(30, 40, 360,75);
+		title.setBounds(30, 115, 360,75);
 		title.setOpaque(true);
 		title.setBorder(new EmptyBorder(0,20,0,0));
 		title.setFont(Theme.FONT_TITLE);
@@ -60,49 +60,49 @@ public class AddEmployeeActivity extends JFrame implements ActionListener{
 		panel.add(buttonBack);
 		
 		employeeIdLabel = new JLabel("ID Impiegato: ");
-		employeeIdLabel.setBounds(60, 140, 140, 30);
+		employeeIdLabel.setBounds(60, 215, 140, 30);
 		employeeIdLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(employeeIdLabel);
 		
 		employeeIdLabel = new JLabel("Password: ");
-		employeeIdLabel.setBounds(60, 190, 140, 30);
+		employeeIdLabel.setBounds(60, 265, 140, 30);
 		employeeIdLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(employeeIdLabel);
 		
 		employeeNameLabel = new JLabel("Nome: ");
-		employeeNameLabel.setBounds(60, 240, 140, 30);
+		employeeNameLabel.setBounds(60, 315, 140, 30);
 		employeeNameLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(employeeNameLabel);
 		
 		employeePhoneLabel = new JLabel("Cellulare: ");
-		employeePhoneLabel.setBounds(60, 290, 140, 30);
+		employeePhoneLabel.setBounds(60, 365, 140, 30);
 		employeePhoneLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(employeePhoneLabel);
 		
 		roleLabel = new JLabel("Ruolo: ");
-		roleLabel.setBounds(60, 340, 340, 30);
+		roleLabel.setBounds(60, 415, 340, 30);
 		roleLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(roleLabel);
 		
 		salaryLabel = new JLabel("Salario: ");
-		salaryLabel.setBounds(60, 390, 140, 30);
+		salaryLabel.setBounds(60, 465, 140, 30);
 		salaryLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(salaryLabel);
 		
 		employeeIdTF = new JTextField();
-		employeeIdTF.setBounds(180, 140, 220, 30);
+		employeeIdTF.setBounds(180, 215, 220, 30);
 		employeeIdTF.setFont(Theme.FONT_INPUT);
 		panel.add(employeeIdTF);
 		
 		passwordTF = new JTextField(""+(r.nextInt(89999999)+10000000));
-		passwordTF.setBounds(180, 190, 220, 30);
+		passwordTF.setBounds(180, 265, 220, 30);
 		passwordTF.setFont(Theme.FONT_INPUT);
 		passwordTF.setEnabled(false);
 		passwordTF.setDisabledTextColor(Color.BLACK);
 		panel.add(passwordTF);
 		
 		buttonRandom = new JButton("Genera");
-		buttonRandom.setBounds(400, 190, Theme.BUTTON_PRIMARY_WIDTH,30);
+		buttonRandom.setBounds(400, 265, Theme.BUTTON_PRIMARY_WIDTH,30);
 		buttonRandom.setFont(Theme.FONT_BUTTON);
 		buttonRandom.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonRandom.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -110,33 +110,33 @@ public class AddEmployeeActivity extends JFrame implements ActionListener{
 		panel.add(buttonRandom);
 		
 		employeeNameTF = new JTextField();
-		employeeNameTF.setBounds(180, 240, 220, 30); 
+		employeeNameTF.setBounds(180, 315, 220, 30); 
 		employeeNameTF.setFont(Theme.FONT_INPUT);
 		panel.add(employeeNameTF);
 		
 		employeePhoneTF1 = new JTextField("+39");
-		employeePhoneTF1.setBounds(180, 290, 40, 30);
+		employeePhoneTF1.setBounds(180, 365, 40, 30);
 		employeePhoneTF1.setEnabled(false);
 		employeePhoneTF1.setFont(Theme.FONT_INPUT);
 		panel.add(employeePhoneTF1);
 	
 		employeePhoneTF2 = new JTextField();
-		employeePhoneTF2.setBounds(220, 290, 180, 30);
+		employeePhoneTF2.setBounds(220, 365, 180, 30);
 		employeePhoneTF2.setFont(Theme.FONT_INPUT);
 		panel.add(employeePhoneTF2);
 		
 		roleCB = new JComboBox(Employee.roles);
-		roleCB.setBounds(180, 340, 160, 30);
+		roleCB.setBounds(180, 415, 160, 30);
 		roleCB.setFont(Theme.FONT_INPUT);
 		panel.add(roleCB);
 		
 		salaryTF = new JTextField();
-		salaryTF.setBounds(180, 390, 220, 30);
+		salaryTF.setBounds(180, 465, 220, 30);
 		salaryTF.setFont(Theme.FONT_INPUT);
 		panel.add(salaryTF);
 		
 		buttonAdd = new JButton("Aggiungi");
-		buttonAdd.setBounds(60, 440, Theme.BUTTON_PRIMARY_WIDTH,30);
+		buttonAdd.setBounds(60, 515, Theme.BUTTON_PRIMARY_WIDTH,30);
 		buttonAdd.setFont(Theme.FONT_BUTTON);
 		buttonAdd.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonAdd.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -144,9 +144,9 @@ public class AddEmployeeActivity extends JFrame implements ActionListener{
 		panel.add(buttonAdd);
 		
 		header = new JLabel();
-		header.setBackground(Theme.BACKGROUND_HEADER);
+		header.setIcon(Theme.IMAGE_HEADER);
 		header.setOpaque(true);
-		header.setBounds(0, 0, Theme.GUI_WIDTH, 75);
+		header.setBounds(0, 0, Theme.GUI_WIDTH, 150);
 		panel.add(header);
 		
 		this.add(panel);
