@@ -110,7 +110,7 @@ public class MyProfileActivity extends JFrame implements ActionListener  {
 		panel.add(phoneLabel);
 		
 		nameTF = new JTextField(customer.getCustomerName());
-		nameTF.setBounds(180, 365, 220, 30);
+		nameTF.setBounds(180, 265, 220, 30);
 		nameTF.setFont(Theme.FONT_INPUT);
 		nameTF.setEnabled(false);
 		nameTF.setDisabledTextColor(Color.BLACK);
