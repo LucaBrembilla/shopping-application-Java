@@ -38,7 +38,7 @@ public class MyProfileActivity extends JFrame implements ActionListener  {
 		this.usr = (User) customer;
 		
 		title = new JLabel("Profilo");
-		title.setBounds(30, 40, 165,75);
+		title.setBounds(30, 115, 165,75);
 		title.setOpaque(true);
 		title.setBorder(new EmptyBorder(0,20,0,0));
 		title.setFont(Theme.FONT_TITLE);
@@ -46,7 +46,7 @@ public class MyProfileActivity extends JFrame implements ActionListener  {
 		panel.add(title);
 		
 		buttonEdit = new JButton("Modifica Profilo");
-		buttonEdit.setBounds(60, 330, 200, 30);
+		buttonEdit.setBounds(60, 405, 200, 30);
 		buttonEdit.setFont(Theme.FONT_BUTTON);
 		buttonEdit.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonEdit.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -54,7 +54,7 @@ public class MyProfileActivity extends JFrame implements ActionListener  {
 		panel.add(buttonEdit);
 		
 		buttonSubmit = new JButton("Invia");
-		buttonSubmit.setBounds(60, 330, 120, 30);
+		buttonSubmit.setBounds(60, 405, 120, 30);
 		buttonSubmit.setFont(Theme.FONT_BUTTON);
 		buttonSubmit.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonSubmit.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -63,7 +63,7 @@ public class MyProfileActivity extends JFrame implements ActionListener  {
 		panel.add(buttonSubmit);
 		
 		buttonPass = new JButton("Cambia Password");
-		buttonPass.setBounds(Theme.GUI_WIDTH-180, 115, 160, 30);
+		buttonPass.setBounds(Theme.GUI_WIDTH-180, 290, 160, 30);
 		buttonPass.setFont(Theme.FONT_BUTTON);
 		buttonPass.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonPass.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -71,7 +71,7 @@ public class MyProfileActivity extends JFrame implements ActionListener  {
 		panel.add(buttonPass);
 		
 		buttonDelete = new JButton("Cancella Account");
-		buttonDelete.setBounds(Theme.GUI_WIDTH-180, 150, 160, 30);
+		buttonDelete.setBounds(Theme.GUI_WIDTH-180, 225, 160, 30);
 		buttonDelete.setFont(Theme.FONT_BUTTON);
 		buttonDelete.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonDelete.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -79,7 +79,7 @@ public class MyProfileActivity extends JFrame implements ActionListener  {
 		panel.add(buttonDelete);
 		
 		buttonLogout = new JButton("Logout");
-		buttonLogout.setBounds(Theme.GUI_WIDTH-140, 40, Theme.BUTTON_PRIMARY_WIDTH, 30);
+		buttonLogout.setBounds(Theme.GUI_WIDTH-140, 115, Theme.BUTTON_PRIMARY_WIDTH, 30);
 		buttonLogout.setFont(Theme.FONT_BUTTON);
 		buttonLogout.setBackground(Color.WHITE);
 		buttonLogout.setForeground(Theme.COLOR_TITLE);
@@ -87,7 +87,7 @@ public class MyProfileActivity extends JFrame implements ActionListener  {
 		panel.add(buttonLogout);
 		
 		buttonBack = new JButton("Indietro");
-		buttonBack.setBounds(Theme.GUI_WIDTH-140, 80, Theme.BUTTON_PRIMARY_WIDTH, 30);
+		buttonBack.setBounds(Theme.GUI_WIDTH-140, 165, Theme.BUTTON_PRIMARY_WIDTH, 30);
 		buttonBack.setFont(Theme.FONT_BUTTON);
 		buttonBack.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonBack.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -95,57 +95,57 @@ public class MyProfileActivity extends JFrame implements ActionListener  {
 		panel.add(buttonBack);
 		
 		usernameLabel = new JLabel("ID Utente:       "+customer.getUserId());
-		usernameLabel.setBounds(60, 140, 440, 30);
+		usernameLabel.setBounds(60, 215, 440, 30);
 		usernameLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(usernameLabel);
 		
 		nameLabel = new JLabel("Nome: ");
-		nameLabel.setBounds(60, 190, 440, 30);
+		nameLabel.setBounds(60, 265, 440, 30);
 		nameLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(nameLabel);
 		
 		phoneLabel = new JLabel("Cellulare: ");
-		phoneLabel.setBounds(60, 240, 440, 30);
+		phoneLabel.setBounds(60, 315, 440, 30);
 		phoneLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(phoneLabel);
 		
 		nameTF = new JTextField(customer.getCustomerName());
-		nameTF.setBounds(180, 190, 220, 30);
+		nameTF.setBounds(180, 365, 220, 30);
 		nameTF.setFont(Theme.FONT_INPUT);
 		nameTF.setEnabled(false);
 		nameTF.setDisabledTextColor(Color.BLACK);
 		panel.add(nameTF);
 		
 		phoneTF1 = new JTextField("+39");
-		phoneTF1.setBounds(180, 240, 40, 30);
+		phoneTF1.setBounds(180, 315, 40, 30);
 		phoneTF1.setFont(Theme.FONT_INPUT);
 		phoneTF1.setEnabled(false);
 		phoneTF1.setDisabledTextColor(Color.BLACK);
 		panel.add(phoneTF1);
 		
 		phoneTF2 = new JTextField(customer.getPhoneNumber().substring(4));
-		phoneTF2.setBounds(220, 240, 180, 30);
+		phoneTF2.setBounds(220, 315, 180, 30);
 		phoneTF2.setFont(Theme.FONT_INPUT);
 		phoneTF2.setEnabled(false);
 		phoneTF2.setDisabledTextColor(Color.BLACK);
 		panel.add(phoneTF2);
 		
 		addressTF = new JTextField(customer.getAddress());
-		addressTF.setBounds(180, 290, 220, 30);
+		addressTF.setBounds(180, 365, 220, 30);
 		addressTF.setEnabled(false);
 		addressTF.setFont(Theme.FONT_INPUT);
 		addressTF.setDisabledTextColor(Color.BLACK);
 		panel.add(addressTF);
 		
 		addressLabel = new JLabel("Indirizzo: ");
-		addressLabel.setBounds(60, 290, 440, 30);
+		addressLabel.setBounds(60, 365, 440, 30);
 		addressLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(addressLabel);
 		
 		header = new JLabel();
-		header.setBackground(Theme.BACKGROUND_HEADER);
+		header.setIcon(Theme.IMAGE_HEADER);
 		header.setOpaque(true);
-		header.setBounds(0, 0, Theme.GUI_WIDTH, 75);
+		header.setBounds(0, 0, Theme.GUI_WIDTH, 150);
 		panel.add(header);
 		
 		this.add(panel);
@@ -168,7 +168,7 @@ public class MyProfileActivity extends JFrame implements ActionListener  {
 		this.usr = (User) employee;
 		
 		title = new JLabel("Profilo");
-		title.setBounds(30, 40, 165,75);
+		title.setBounds(30, 115, 165,75);
 		title.setOpaque(true);
 		title.setBorder(new EmptyBorder(0,20,0,0));
 		title.setFont(Theme.FONT_TITLE);
@@ -176,7 +176,7 @@ public class MyProfileActivity extends JFrame implements ActionListener  {
 		panel.add(title);
 		
 		buttonEdit = new JButton("Modifica profilo");
-		buttonEdit.setBounds(60, 380, 200, 30);
+		buttonEdit.setBounds(60, 455, 200, 30);
 		buttonEdit.setFont(Theme.FONT_BUTTON);
 		buttonEdit.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonEdit.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -184,7 +184,7 @@ public class MyProfileActivity extends JFrame implements ActionListener  {
 		panel.add(buttonEdit);
 		
 		buttonSubmit = new JButton("Invia");
-		buttonSubmit.setBounds(60, 380, 120, 30);
+		buttonSubmit.setBounds(60, 455, 120, 30);
 		buttonSubmit.setFont(Theme.FONT_BUTTON);
 		buttonSubmit.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonSubmit.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -193,7 +193,7 @@ public class MyProfileActivity extends JFrame implements ActionListener  {
 		panel.add(buttonSubmit);
 		
 		buttonPass = new JButton("Cambia Password");
-		buttonPass.setBounds(Theme.GUI_WIDTH-180, 115, 160, 30);
+		buttonPass.setBounds(Theme.GUI_WIDTH-180, 190, 160, 30);
 		buttonPass.setFont(Theme.FONT_BUTTON);
 		buttonPass.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonPass.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -201,7 +201,7 @@ public class MyProfileActivity extends JFrame implements ActionListener  {
 		panel.add(buttonPass);
 		
 		buttonLogout = new JButton("Logout");
-		buttonLogout.setBounds(Theme.GUI_WIDTH-140, 40, Theme.BUTTON_PRIMARY_WIDTH, 30);
+		buttonLogout.setBounds(Theme.GUI_WIDTH-140, 115, Theme.BUTTON_PRIMARY_WIDTH, 30);
 		buttonLogout.setFont(Theme.FONT_BUTTON);
 		buttonLogout.setBackground(Color.WHITE);
 		buttonLogout.setForeground(Theme.COLOR_TITLE);
@@ -209,7 +209,7 @@ public class MyProfileActivity extends JFrame implements ActionListener  {
 		panel.add(buttonLogout);
 		
 		buttonBack = new JButton("Indietro");
-		buttonBack.setBounds(Theme.GUI_WIDTH-140, 80, Theme.BUTTON_PRIMARY_WIDTH, 30);
+		buttonBack.setBounds(Theme.GUI_WIDTH-140, 155, Theme.BUTTON_PRIMARY_WIDTH, 30);
 		buttonBack.setFont(Theme.FONT_BUTTON);
 		buttonBack.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonBack.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -217,56 +217,56 @@ public class MyProfileActivity extends JFrame implements ActionListener  {
 		panel.add(buttonBack);
 		
 		usernameLabel = new JLabel("ID Utente:        "+employee.getUserId());
-		usernameLabel.setBounds(60, 140, 440, 30);
+		usernameLabel.setBounds(60, 215, 440, 30);
 		usernameLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(usernameLabel);
 		
 		nameLabel = new JLabel("Nome: ");
-		nameLabel.setBounds(60, 190, 440, 30);
+		nameLabel.setBounds(60, 265, 440, 30);
 		nameLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(nameLabel);
 		
 		phoneLabel = new JLabel("Cellulare: ");
-		phoneLabel.setBounds(60, 240, 440, 30);
+		phoneLabel.setBounds(60, 315, 440, 30);
 		phoneLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(phoneLabel);
 		
 		roleLabel = new JLabel("Ruolo:             "+employee.getRole());
-		roleLabel.setBounds(60, 290, 440, 30);
+		roleLabel.setBounds(60, 365, 440, 30);
 		roleLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(roleLabel);
 		
 		salaryLabel = new JLabel("Salario:          "+employee.getSalary());
-		salaryLabel.setBounds(60, 340, 440, 30);
+		salaryLabel.setBounds(60, 415, 440, 30);
 		salaryLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(salaryLabel);
 		
 		
 		nameTF = new JTextField(employee.getEmployeeName());
-		nameTF.setBounds(180, 190, 220, 30);
+		nameTF.setBounds(180, 265, 220, 30);
 		nameTF.setFont(Theme.FONT_INPUT);
 		nameTF.setEnabled(false);
 		nameTF.setDisabledTextColor(Color.BLACK);
 		panel.add(nameTF);
 		
 		phoneTF1 = new JTextField("+39");
-		phoneTF1.setBounds(180, 240, 40, 30);
+		phoneTF1.setBounds(180, 315, 40, 30);
 		phoneTF1.setFont(Theme.FONT_INPUT);
 		phoneTF1.setEnabled(false);
 		phoneTF1.setDisabledTextColor(Color.BLACK);
 		panel.add(phoneTF1);
 		
 		phoneTF2 = new JTextField(employee.getPhoneNumber().substring(4));
-		phoneTF2.setBounds(220, 240, 180, 30);
+		phoneTF2.setBounds(220, 315, 180, 30);
 		phoneTF2.setFont(Theme.FONT_INPUT);
 		phoneTF2.setEnabled(false);
 		phoneTF2.setDisabledTextColor(Color.BLACK);
 		panel.add(phoneTF2);
 		
 		header = new JLabel();
-		header.setBackground(Theme.BACKGROUND_HEADER);
+		header.setIcon(Theme.IMAGE_HEADER);
 		header.setOpaque(true);
-		header.setBounds(0, 0, Theme.GUI_WIDTH, 75);
+		header.setBounds(0, 0, Theme.GUI_WIDTH, 150);
 		panel.add(header);
 		
 		this.add(panel);
