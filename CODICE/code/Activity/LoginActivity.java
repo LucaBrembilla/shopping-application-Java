@@ -42,7 +42,7 @@ super("Login");
 		panel.setBackground(Theme.BACKGROUND_PANEL);
 		
 		title = new JLabel("Peso's Takeaway");
-		title.setBounds(30, 40, 365, 75);
+		title.setBounds(30, 115, 365, 75);
 		title.setOpaque(true);
 		title.setBorder(new EmptyBorder(0,20,0,0));
 		title.setFont(Theme.FONT_TITLE);
@@ -50,7 +50,7 @@ super("Login");
 		panel.add(title);
 		
 		buttonExit = new JButton("Esci");
-		buttonExit.setBounds(Theme.GUI_WIDTH-140, 40, Theme.BUTTON_PRIMARY_WIDTH,30);
+		buttonExit.setBounds(Theme.GUI_WIDTH-140, 115, Theme.BUTTON_PRIMARY_WIDTH,30);
 		buttonExit.setFont(Theme.FONT_BUTTON);
 		buttonExit.setBackground(Color.WHITE);
 		buttonExit.setForeground(Theme.COLOR_TITLE);
@@ -58,7 +58,7 @@ super("Login");
 		panel.add(buttonExit);
 		
 		buttonSignup = new JButton("Registrati");
-		buttonSignup.setBounds(Theme.GUI_WIDTH-150, 80, Theme.BUTTON_PRIMARY_WIDTH+20,30);
+		buttonSignup.setBounds(Theme.GUI_WIDTH-150,155, Theme.BUTTON_PRIMARY_WIDTH+20,30);
 		buttonSignup.setFont(Theme.FONT_BUTTON);
 		buttonSignup.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonSignup.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -66,27 +66,27 @@ super("Login");
 		panel.add(buttonSignup);
 		
 		usernameLabel = new JLabel("ID Utente: ");
-		usernameLabel.setBounds(210, 220, 120, 30);
+		usernameLabel.setBounds(210, 295, 120, 30);
 		usernameLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(usernameLabel);
 		
 		usernameTF = new JTextField();
-		usernameTF.setBounds(330, 220, 220, 30);
+		usernameTF.setBounds(330,295, 220, 30);
 		usernameTF.setFont(Theme.FONT_INPUT);
 		panel.add(usernameTF);
 		
 		passwordLabel = new JLabel("Password: ");
-		passwordLabel.setBounds(210, 280, 120, 30);
+		passwordLabel.setBounds(210, 355, 120, 30);
 		passwordLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(passwordLabel);
 		
 		passwordF = new JPasswordField();
-		passwordF.setBounds(330, 280, 220, 30);
+		passwordF.setBounds(330, 355, 220, 30);
 		passwordF.setFont(Theme.FONT_INPUT);
 		panel.add(passwordF);
 		
 		buttonLogin = new JButton("Login");
-		buttonLogin.setBounds(230, 345, 300, 30);
+		buttonLogin.setBounds(230, 420, 300, 30);
 		buttonLogin.setFont(Theme.FONT_BUTTON);
 		buttonLogin.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonLogin.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -94,9 +94,9 @@ super("Login");
 		panel.add(buttonLogin);
 		
 		header = new JLabel();
-		header.setBackground(Theme.BACKGROUND_HEADER);
+		header.setIcon(Theme.IMAGE_HEADER);
 		header.setOpaque(true);
-		header.setBounds(0, 0, Theme.GUI_WIDTH, 75);
+		header.setBounds(0, 0, Theme.GUI_WIDTH, 150);
 		panel.add(header);
 		
 		this.add(panel);
