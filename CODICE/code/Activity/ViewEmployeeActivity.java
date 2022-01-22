@@ -101,7 +101,7 @@ public class ViewEmployeeActivity extends JFrame implements ActionListener {
             }
 		});
 		frame = new JScrollPane(table);
-		frame.setBounds(40,360,600,300);
+		frame.setBounds(40,260,600,300);
 		panel.add(frame);
 		
 		table.setModel(Employee.searchEmployee("", "By Name"));
