@@ -45,7 +45,7 @@ public class AddFoodActivity extends JFrame implements ActionListener  {
 		panel.setBackground(Theme.BACKGROUND_PANEL);
 		
 		title = new JLabel("Aggiungi panino");
-		title.setBounds(30, 40, 350,75);
+		title.setBounds(30, 115, 350,75);
 		title.setOpaque(true);
 		title.setBorder(new EmptyBorder(0,20,0,0));
 		title.setFont(Theme.FONT_TITLE);
@@ -69,47 +69,47 @@ public class AddFoodActivity extends JFrame implements ActionListener  {
 		panel.add(buttonBack);
 		
 		productNameLabel = new JLabel("Nome: ");
-		productNameLabel.setBounds(60, 190, 140, 30);
+		productNameLabel.setBounds(60, 265, 140, 30);
 		productNameLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(productNameLabel);
 		
 		productPriceLabel = new JLabel("Prezzo: ");
-		productPriceLabel.setBounds(60, 240, 140, 30);
+		productPriceLabel.setBounds(60, 315, 140, 30);
 		productPriceLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(productPriceLabel);
 		
-		productQtLabel = new JLabel("Quantit‡: ");
-		productQtLabel.setBounds(60, 290, 140, 30);
+		productQtLabel = new JLabel("Quantit√†: ");
+		productQtLabel.setBounds(60, 365, 140, 30);
 		productQtLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(productQtLabel);
 		
 		productDescriptionLabel = new JLabel("Descrizione: ");
-		productDescriptionLabel.setBounds(60, 340, 140, 30);
+		productDescriptionLabel.setBounds(60, 415, 140, 30);
 		productDescriptionLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(productDescriptionLabel);
 		
 		productNameTF = new JTextField();
-		productNameTF.setBounds(180, 190, 220, 30);
+		productNameTF.setBounds(180, 265, 220, 30);
 		productNameTF.setFont(Theme.FONT_INPUT);
 		panel.add(productNameTF);
 		
 		productPriceTF = new JTextField();
-		productPriceTF.setBounds(180, 240, 220, 30);
+		productPriceTF.setBounds(180, 315, 220, 30);
 		productPriceTF.setFont(Theme.FONT_INPUT);
 		panel.add(productPriceTF);
 		
 		productQtTF = new JTextField();
-		productQtTF.setBounds(180, 290, 220, 30);
+		productQtTF.setBounds(180, 365, 220, 30);
 		productQtTF.setFont(Theme.FONT_INPUT);
 		panel.add(productQtTF);
 		
 		productDescriptionTF = new JTextField();
-		productDescriptionTF.setBounds(180, 340, 220, 30);
+		productDescriptionTF.setBounds(180, 415, 220, 30);
 		productDescriptionTF.setFont(Theme.FONT_INPUT);
 		panel.add(productDescriptionTF);
 		
 		buttonAdd = new JButton("Aggiungi");
-		buttonAdd.setBounds(60, 390, Theme.BUTTON_PRIMARY_WIDTH,30);
+		buttonAdd.setBounds(60, 465, Theme.BUTTON_PRIMARY_WIDTH,30);
 		buttonAdd.setFont(Theme.FONT_BUTTON);
 		buttonAdd.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonAdd.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -117,9 +117,9 @@ public class AddFoodActivity extends JFrame implements ActionListener  {
 		panel.add(buttonAdd);
 		
 		header = new JLabel();
-		header.setBackground(Theme.BACKGROUND_HEADER);
+		header.setIcon(Theme.IMAGE_HEADER);
 		header.setOpaque(true);
-		header.setBounds(0, 0, Theme.GUI_WIDTH, 75);
+		header.setBounds(0, 0, Theme.GUI_WIDTH, 150);
 		panel.add(header);
 		
 		this.add(panel);
@@ -155,7 +155,7 @@ public class AddFoodActivity extends JFrame implements ActionListener  {
 					activity.table.setModel(Food.searchFood("", "By Name"));
 			}
 			catch (NumberFormatException e) {
-				JOptionPane.showMessageDialog(this,"Inserisci Prezzo/Quantit‡ corretta!"); 
+				JOptionPane.showMessageDialog(this,"Inserisci Prezzo/Quantit√† corretta!"); 
 			}
 			catch (IllegalArgumentException e) {
 				JOptionPane.showMessageDialog(this,e.getMessage()); 
