@@ -37,7 +37,7 @@ public class ViewCustomerActivity extends JFrame implements ActionListener {
 		panel.setBackground(Theme.BACKGROUND_PANEL);
 		
 		title = new JLabel("Vista Cliente");
-		title.setBounds(30, 40, 340,75);
+		title.setBounds(30, 115, 340,75);
 		title.setOpaque(true);
 		title.setBorder(new EmptyBorder(0,20,0,0));
 		title.setFont(Theme.FONT_TITLE);
@@ -45,7 +45,7 @@ public class ViewCustomerActivity extends JFrame implements ActionListener {
 		panel.add(title);
 		
 		buttonLogout = new JButton("Logout");
-		buttonLogout.setBounds(Theme.GUI_WIDTH-140, 40, Theme.BUTTON_PRIMARY_WIDTH,30);
+		buttonLogout.setBounds(Theme.GUI_WIDTH-140, 115, Theme.BUTTON_PRIMARY_WIDTH,30);
 		buttonLogout.setFont(Theme.FONT_BUTTON);
 		buttonLogout.setBackground(Color.WHITE);
 		buttonLogout.setForeground(Theme.COLOR_TITLE);
@@ -53,7 +53,7 @@ public class ViewCustomerActivity extends JFrame implements ActionListener {
 		panel.add(buttonLogout);
 		
 		buttonBack = new JButton("Indietro");
-		buttonBack.setBounds(Theme.GUI_WIDTH-140, 80, Theme.BUTTON_PRIMARY_WIDTH,30);
+		buttonBack.setBounds(Theme.GUI_WIDTH-140, 155, Theme.BUTTON_PRIMARY_WIDTH,30);
 		buttonBack.setFont(Theme.FONT_BUTTON);
 		buttonBack.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonBack.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -61,22 +61,22 @@ public class ViewCustomerActivity extends JFrame implements ActionListener {
 		panel.add(buttonBack);
 		
 		keywordLabel = new JLabel("Chiave: ");
-		keywordLabel.setBounds(60, 140, 140, 30);
+		keywordLabel.setBounds(60, 215, 140, 30);
 		keywordLabel.setFont(Theme.FONT_REGULAR);
 		panel.add(keywordLabel);
 		
 		keywordTF = new JTextField();
-		keywordTF.setBounds(160, 140, 240, 30);
+		keywordTF.setBounds(160, 215, 240, 30);
 		keywordTF.setFont(Theme.FONT_INPUT);
 		panel.add(keywordTF);
 		
 		byWhatCB = new JComboBox(new Object[]{"By ID", "By Name"});
-		byWhatCB.setBounds(400, 140, 100,30);
+		byWhatCB.setBounds(400, 215, 100,30);
 		byWhatCB.setFont(Theme.FONT_INPUT);
 		panel.add(byWhatCB);
 		
 		buttonCheck = new JButton("Cerca");
-		buttonCheck.setBounds(500, 140, Theme.BUTTON_PRIMARY_WIDTH,30);
+		buttonCheck.setBounds(500, 215, Theme.BUTTON_PRIMARY_WIDTH,30);
 		buttonCheck.setFont(Theme.FONT_BUTTON);
 		buttonCheck.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonCheck.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -93,15 +93,15 @@ public class ViewCustomerActivity extends JFrame implements ActionListener {
             }
 		});
 		frame = new JScrollPane(table);
-		frame.setBounds(40,185,600,300);
+		frame.setBounds(40,260,600,300);
 		panel.add(frame);
 		
 		table.setModel(Customer.searchCustomer("", "By Name"));
 		
 		header = new JLabel();
-		header.setBackground(Theme.BACKGROUND_HEADER);
+		header.setIcon(Theme.IMAGE_HEADER);
 		header.setOpaque(true);
-		header.setBounds(0, 0, Theme.GUI_WIDTH, 75);
+		header.setBounds(0, 0, Theme.GUI_WIDTH, 150);
 		panel.add(header);
 		
 		this.add(panel);
