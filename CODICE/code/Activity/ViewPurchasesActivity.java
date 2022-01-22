@@ -37,7 +37,7 @@ public class ViewPurchasesActivity extends JFrame implements ActionListener  {
 		panel.setBackground(Theme.BACKGROUND_PANEL);
 		
 		title = new JLabel("Tutti gli ordini");
-		title.setBounds(30, 40, 315,75);
+		title.setBounds(30, 115, 315,75);
 		title.setOpaque(true);
 		title.setBorder(new EmptyBorder(0,20,0,0));
 		title.setFont(Theme.FONT_TITLE);
@@ -45,7 +45,7 @@ public class ViewPurchasesActivity extends JFrame implements ActionListener  {
 		panel.add(title);
 		
 		buttonLogout = new JButton("Logout");
-		buttonLogout.setBounds(Theme.GUI_WIDTH-140, 40, Theme.BUTTON_PRIMARY_WIDTH,30);
+		buttonLogout.setBounds(Theme.GUI_WIDTH-140, 115, Theme.BUTTON_PRIMARY_WIDTH,30);
 		buttonLogout.setFont(Theme.FONT_BUTTON);
 		buttonLogout.setBackground(Color.WHITE);
 		buttonLogout.setForeground(Theme.COLOR_TITLE);
@@ -53,7 +53,7 @@ public class ViewPurchasesActivity extends JFrame implements ActionListener  {
 		panel.add(buttonLogout);
 		
 		buttonBack = new JButton("Indietro");
-		buttonBack.setBounds(Theme.GUI_WIDTH-140, 80, Theme.BUTTON_PRIMARY_WIDTH,30);
+		buttonBack.setBounds(Theme.GUI_WIDTH-140, 155, Theme.BUTTON_PRIMARY_WIDTH,30);
 		buttonBack.setFont(Theme.FONT_BUTTON);
 		buttonBack.setBackground(Theme.BACKGROUND_BUTTON_PRIMARY);
 		buttonBack.setForeground(Theme.COLOR_BUTTON_PRIMARY);
@@ -63,13 +63,13 @@ public class ViewPurchasesActivity extends JFrame implements ActionListener  {
 		table = new JTable();
 		table.setModel(employee.AllProduct());
 		frame = new JScrollPane(table);
-		frame.setBounds(40,140,600,300);
+		frame.setBounds(40,215,600,300);
 		panel.add(frame);
 		
 		header = new JLabel();
-		header.setBackground(Theme.BACKGROUND_HEADER);
+		header.setIcon(Theme.IMAGE_HEADER);
 		header.setOpaque(true);
-		header.setBounds(0, 0, Theme.GUI_WIDTH, 75);
+		header.setBounds(0, 0, Theme.GUI_WIDTH, 150);
 		panel.add(header);
 		
 		this.add(panel);
