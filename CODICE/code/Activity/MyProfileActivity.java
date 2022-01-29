@@ -123,7 +123,7 @@ public class MyProfileActivity extends JFrame implements ActionListener  {
 		phoneTF1.setDisabledTextColor(Color.BLACK);
 		panel.add(phoneTF1);
 		
-		phoneTF2 = new JTextField(customer.getPhoneNumber().substring(4));
+		phoneTF2 = new JTextField(customer.getPhoneNumber().substring(3));
 		phoneTF2.setBounds(220, 315, 180, 30);
 		phoneTF2.setFont(Theme.FONT_INPUT);
 		phoneTF2.setEnabled(false);
