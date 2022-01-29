@@ -65,12 +65,12 @@ public class Customer extends User {
 			st.execute(query1);//insert
 			st.execute(query2);
 			System.out.println("data inserted");
-			JOptionPane.showMessageDialog(sa,"Account Created!");
+			JOptionPane.showMessageDialog(sa,"Account Creato!");
 			sa.setVisible(false);
 			new LoginActivity().setVisible(true);
 		}
         catch(Exception ex) {
-			JOptionPane.showMessageDialog(sa,"Failed to create account!");
+			JOptionPane.showMessageDialog(sa,"Fallito!");
 			System.out.println("Exception : " +ex.getMessage());
         }
         finally {
@@ -139,13 +139,13 @@ public class Customer extends User {
 			System.out.println("statement created");
 			st.executeUpdate(query);//insert
 			System.out.println("data inserted");
-			JOptionPane.showMessageDialog(null,"Information Updated!");
+			JOptionPane.showMessageDialog(null,"Aggiornato!");
 			this.customerName = name;
 			this.phoneNumber = "+39"+phone;
 			this.address = address;
 		}
         catch(Exception ex) {
-			JOptionPane.showMessageDialog(null,"Failed to update account!");
+			JOptionPane.showMessageDialog(null,"Fallito!");
 			System.out.println("Exception : " +ex.getMessage());
         }
         finally {
@@ -176,14 +176,14 @@ public class Customer extends User {
 			st.execute(query1);
 			st.execute(query2);//delete
 			System.out.println("data deleted");
-			JOptionPane.showMessageDialog(null,"Account Deleted!");
+			JOptionPane.showMessageDialog(null,"Account Cancellato!");
 			this.userId = "";
 			this.customerName = "";
 			this.phoneNumber = "";
 			this.address = "";
 		}
         catch(Exception ex) {
-			JOptionPane.showMessageDialog(null,"Failed to delete account!");
+			JOptionPane.showMessageDialog(null,"Fallito!");
 			System.out.println("Exception : " +ex.getMessage());
         }
         finally {
