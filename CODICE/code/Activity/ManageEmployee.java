@@ -110,7 +110,7 @@ public class ManageEmployee extends JFrame implements ActionListener  {
 	public void actionPerformed(ActionEvent ae) {
 		if (ae.getSource().equals(buttonEdit)) {
 			try {
-				employee.updateEmployee(employeeNameTF.getText(),Integer.parseInt(phoneNumberTF.getText()),roleCB.getSelectedItem().toString(), Double.parseDouble(salaryTF.getText()));
+				employee.updateEmployee(employeeNameTF.getText(),Long.parseLong(phoneNumberTF.getText()),roleCB.getSelectedItem().toString(), Double.parseDouble(salaryTF.getText()));
 				if (!prev.keywordTF.getText().trim().isEmpty())
 					prev.table.setModel(Employee.searchEmployee(prev.keywordTF.getText().trim(), prev.byWhatCB.getSelectedItem().toString()));
 				else
