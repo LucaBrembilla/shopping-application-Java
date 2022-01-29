@@ -139,7 +139,7 @@ public class Customer extends User {
 			System.out.println("statement created");
 			st.executeUpdate(query);//insert
 			System.out.println("data inserted");
-			JOptionPane.showMessageDialog(null,"Aggiornato!");
+			JOptionPane.showMessageDialog(null,"Profilo aggiornato!");
 			this.customerName = name;
 			this.phoneNumber = "+39"+phone;
 			this.address = address;
