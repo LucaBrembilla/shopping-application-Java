@@ -166,7 +166,7 @@ public class AddEmployeeActivity extends JFrame implements ActionListener{
 				Employee e = new Employee(employeeIdTF.getText().trim());
 				e.setPassword(passwordTF.getText().trim());
 				e.setEmployeeName(employeeNameTF.getText().trim());
-				e.setPhoneNumber(Integer.parseInt(employeePhoneTF2.getText()));
+				e.setPhoneNumber(Long.parseLong(employeePhoneTF2.getText()));
 				e.setSalary(Double.parseDouble(salaryTF.getText()));
 				e.setRole(roleCB.getSelectedItem().toString());
 				e.createEmployee();
