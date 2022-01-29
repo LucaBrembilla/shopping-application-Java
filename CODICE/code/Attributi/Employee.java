@@ -30,7 +30,7 @@ public class Employee extends User {
 		else
 			throw new IllegalArgumentException("Inserisci un nome");
 	}
-	public void setPhoneNumber(int num) {
+	public void setPhoneNumber(long num) {
 		this.phoneNumber = "+39"+num;
 	}
 	public void setRole(String role) {
@@ -128,7 +128,7 @@ public class Employee extends User {
         }
 	}
 	
-	public void updateEmployee(String name, int phone, String role, double salary) {
+	public void updateEmployee(String name, long phone, String role, double salary) {
 		String query = "UPDATE `employee` SET `employeeName`='"+name+"', `phoneNumber`='+39"+phone+"', `role`='"+role+"', `salary`="+salary+" WHERE `userId`='"+this.userId+"';";
 		Connection con = null;
         Statement st = null;
