@@ -294,7 +294,7 @@ public class MyProfileActivity extends JFrame implements ActionListener  {
 			if (customer!=null) {
 				addressTF.setEnabled(false);
 				try {
-					customer.updateCustomer(nameTF.getText().trim(), Integer.parseInt(phoneTF2.getText()), addressTF.getText().trim());
+					customer.updateCustomer(nameTF.getText().trim(), Long.parseLong(phoneTF2.getText()), addressTF.getText().trim());
 					buttonEdit.setVisible(true);
 					buttonSubmit.setVisible(false);
 					nameTF.setEnabled(false);
