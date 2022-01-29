@@ -18,7 +18,7 @@ public abstract class User {
 		if (!userId.isEmpty())
 			this.userId = userId;
 		else
-			throw new IllegalArgumentException("Fill in the User ID");
+			throw new IllegalArgumentException("Inserisci un Id Utente");
 	}
 	
 	public abstract void fetch();
