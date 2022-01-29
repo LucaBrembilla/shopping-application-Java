@@ -30,7 +30,7 @@ public class Customer extends User {
 			throw new IllegalArgumentException("Nome non valido");
 	}
 	public void setPhoneNumber(int num) {
-		this.phoneNumber = "+880"+num;
+		this.phoneNumber = "+39"+num;
 	}
 	public void setAddress(String address) {
 		if (!address.isEmpty())
@@ -126,7 +126,7 @@ public class Customer extends User {
 	}
 	
 	public void updateCustomer(String name, int phone, String address) {
-		String query = "UPDATE `customer` SET `customerName`='"+name+"', `phoneNumber`='+880"+phone+"', `address`='"+address+"' WHERE `userId`='"+this.userId+"';";
+		String query = "UPDATE `customer` SET `customerName`='"+name+"', `phoneNumber`='+39"+phone+"', `address`='"+address+"' WHERE `userId`='"+this.userId+"';";
 		Connection con = null;
         Statement st = null;
 		System.out.println(query);
