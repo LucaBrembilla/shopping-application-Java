@@ -306,7 +306,7 @@ public class MyProfileActivity extends JFrame implements ActionListener  {
 			}
 			else if (employee!=null) {
 				try {
-					employee.updateEmployee(nameTF.getText().trim(), Integer.parseInt(phoneTF2.getText()), employee.getRole(), employee.getSalary());
+					employee.updateEmployee(nameTF.getText().trim(), Long.parseLong(phoneTF2.getText()), employee.getRole(), employee.getSalary());
 					buttonEdit.setVisible(true);
 					buttonSubmit.setVisible(false);
 					nameTF.setEnabled(false);
