@@ -28,7 +28,7 @@ public class Employee extends User {
 		if (!name.isEmpty())
 			this.employeeName = name;
 		else
-			throw new IllegalArgumentException("Fill in the name");
+			throw new IllegalArgumentException("Inserisci un nome");
 	}
 	public void setPhoneNumber(int num) {
 		this.phoneNumber = "+39"+num;
@@ -69,7 +69,7 @@ public class Employee extends User {
 			st.execute(query1);//insert
 			st.execute(query2);
 			System.out.println("data inserted");
-			JOptionPane.showMessageDialog(null,"Account Created!");
+			JOptionPane.showMessageDialog(null,"Account Creato!");
 		}
         catch(Exception ex) {
 			JOptionPane.showMessageDialog(null,"Fallito!");
@@ -142,7 +142,7 @@ public class Employee extends User {
 			System.out.println("statement created");
 			st.executeUpdate(query);//insert
 			System.out.println("data inserted");
-			JOptionPane.showMessageDialog(null,"Information Updated!");
+			JOptionPane.showMessageDialog(null,"Aggiornato!");
 			this.employeeName = name;
 			this.phoneNumber = "+39"+phone;
 			this.role = role;
@@ -181,7 +181,7 @@ public class Employee extends User {
 			st.execute(query1);
 			st.execute(query2);//delete
 			System.out.println("data deleted");
-			JOptionPane.showMessageDialog(null,"Account Deleted!");
+			JOptionPane.showMessageDialog(null,"Cancellato!");
 			this.userId = "";
 			this.employeeName = "";
 			this.phoneNumber = "";
