@@ -29,7 +29,7 @@ public class Customer extends User {
 		else
 			throw new IllegalArgumentException("Nome non valido");
 	}
-	public void setPhoneNumber(int num) {
+	public void setPhoneNumber(long num) {
 		this.phoneNumber = "+39"+num;
 	}
 	public void setAddress(String address) {
@@ -125,7 +125,7 @@ public class Customer extends User {
         }
 	}
 	
-	public void updateCustomer(String name, int phone, String address) {
+	public void updateCustomer(String name, long phone, String address) {
 		String query = "UPDATE `customer` SET `customerName`='"+name+"', `phoneNumber`='+39"+phone+"', `address`='"+address+"' WHERE `userId`='"+this.userId+"';";
 		Connection con = null;
         Statement st = null;
