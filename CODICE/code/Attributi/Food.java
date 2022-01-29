@@ -125,6 +125,7 @@ public class Food extends Product {
      * @return
      */
     public void sellFood(String  uid, int  amount) {
+	    if(this.quantity >= amount) {
     	String date = new SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime());
 		String query = "INSERT INTO `purchaseInfo` (`userId`, `productId`, `amount`, `date`, `cost`) VALUES ('"+uid+"','"+this.productId+"',"+amount+", '"+date+"', "+(amount*this.price)+");";
 		Connection con = null;
@@ -154,7 +155,10 @@ public class Food extends Product {
 					con.close();
             }
             catch(Exception ex) {}
-        }
+	}	
+        } else {
+    		JOptionPane.showMessageDialog(null,"Quantità non disponibile!"); 
+    	}
     }
 
     /**
