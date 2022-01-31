@@ -1,0 +1,24 @@
+Come fare per avviare server e connetterlo a programma java
+1) Scaricare XAMPP. Una volta scaricato avviarlo. 
+Una volta avviato startare Apache e MySql.
+Aprire quindi il browser e connettersi alla pagina http://localhost/phpmyadmin/
+Creare un database chiamato pesos.
+Copiare il file pesos.sql all'interno di \XAMPP\mysql\bin 
+(accessibile dal pannello XAMPP cliccando su Explorer).
+Aprire CMD. Navigare fino a \XAMPP\mysql\bin. 
+Usare il comando "mysql -u root -p pesos < pesos.sql". La password richiesta è vuota,
+quindi premere un'altra volta enter.
+Abbiamo quindi creato il nostro db e le nostre tabelle.
+
+2) (Già fatto nel progetto)
+Scaricare il Connector/J per collegare Java al db di mysql. Scaricare
+da https://dev.mysql.com/downloads/connector/j/ il file zip mettendo l'opzione
+"Platform Independent". Quindi estrarre dal file zip il 
+file mysql-connector-java-8.0.27.
+Una volta estratto aprire eclipse. Clicchiamo sul nostro progetto in Java e
+aggiungiamo la cartella bin, in cui trasciniamo il file del connettore. 
+Successivamente fare Build Path->Configure Build Path e in Libraries->Modulepath
+cliccare su "Add External Jars". Aggiungere dunque il nostro mysql-connector.
+
+3) Runnare l'applicazione
+
